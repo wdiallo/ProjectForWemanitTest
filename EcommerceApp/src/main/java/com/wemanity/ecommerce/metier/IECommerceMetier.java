@@ -15,7 +15,7 @@ public interface IECommerceMetier {
 	public Customer addCustomer(Customer c);
 	public Item addItem(Item it, Long codeCat, Long codeBrand);
 	public Brand addBrand(Brand b);
-	public OrderCustomer addOrder(OrderCustomer o, Long codeCust);
+	public OrderCustomer addOrderCustomer(OrderCustomer o, Long codeCust);
 	public OrderItem addOrderItem(OrderItem oi, Long codeOrderCust, Long codeItem);
 	
 	public Category consultCategory(Long codeCat);

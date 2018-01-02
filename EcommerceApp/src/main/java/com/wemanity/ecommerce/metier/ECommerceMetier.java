@@ -42,8 +42,8 @@ public class ECommerceMetier implements IECommerceMetier{
 	}
 
 	@Override
-	public OrderCustomer addOrder(OrderCustomer o, Long codeCust) {
-		return dao.addOrder(o, codeCust);
+	public OrderCustomer addOrderCustomer(OrderCustomer o, Long codeCust) {
+		return dao.addOrderCustomer(o, codeCust);
 	}
 
 	@Override

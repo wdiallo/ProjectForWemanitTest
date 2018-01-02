@@ -52,7 +52,7 @@ public class ECommerceDao implements IECommerceDao{
 	}
 
 	@Override
-	public OrderCustomer addOrder(OrderCustomer o, Long codeCust) {
+	public OrderCustomer addOrderCustomer(OrderCustomer o, Long codeCust) {
 		if(codeCust != null) {
 			Customer cust = consultCustomer(codeCust);
 			o.setCustomerOrder(cust);
@@ -66,8 +66,8 @@ public class ECommerceDao implements IECommerceDao{
 		if(codeOrderCust != null) {
 			OrderCustomer ord = consultOrderCustomer(codeOrderCust);
 			Item it = consultItem(codeItem);
-			oi.setCodeOrderCustomer(ord);
-			oi.setCodeItem(it);
+			oi.setOrderCustomer(ord);
+			oi.setItemOrder(it);
 		}
 		em.persist(oi);
 		return oi;

@@ -62,20 +62,20 @@ public class OrderItem implements Serializable{
 		this.priceUnit = priceUnit;
 	}
 
-	public OrderCustomer getCodeOrderCustomer() {
+	public OrderCustomer getOrderCustomer() {
 		return customerOrder;
 	}
 
-	public void setCodeOrderCustomer(OrderCustomer codeOrderCustomer) {
-		this.customerOrder = codeOrderCustomer;
+	public void setOrderCustomer(OrderCustomer orderCustomer) {
+		this.customerOrder = orderCustomer;
 	}
 
-	public Item getCodeItem() {
+	public Item getItemOrder() {
 		return itemOrder;
 	}
 
-	public void setCodeItem(Item codeItem) {
-		this.itemOrder = codeItem;
+	public void setItemOrder(Item itemOrder) {
+		this.itemOrder = itemOrder;
 	}
 	
 	

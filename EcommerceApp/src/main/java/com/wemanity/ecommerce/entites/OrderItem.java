@@ -12,7 +12,7 @@ import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
 @Entity
-@Table(uniqueConstraints=@UniqueConstraint(columnNames = {"codeOrderCustomer", "codeItem"}))
+@Table(uniqueConstraints=@UniqueConstraint(columnNames = {"customerOrder", "itemOrder"}))
 public class OrderItem implements Serializable{
 	
 	@Id
@@ -21,11 +21,11 @@ public class OrderItem implements Serializable{
 	private int quantity;
 	private double priceUnit;
 	@ManyToOne
-	@JoinColumn(name="codeOrderCustomer")
-	private OrderCustomer codeOrderCustomer;
+	@JoinColumn(name="customerOrder")
+	private OrderCustomer customerOrder;
 	@ManyToOne
-	@JoinColumn(name="codeItem")
-	private Item codeItem;
+	@JoinColumn(name="itemOrder")
+	private Item itemOrder;
 	
 	public OrderItem() {
 		super();
@@ -63,19 +63,19 @@ public class OrderItem implements Serializable{
 	}
 
 	public OrderCustomer getCodeOrderCustomer() {
-		return codeOrderCustomer;
+		return customerOrder;
 	}
 
 	public void setCodeOrderCustomer(OrderCustomer codeOrderCustomer) {
-		this.codeOrderCustomer = codeOrderCustomer;
+		this.customerOrder = codeOrderCustomer;
 	}
 
 	public Item getCodeItem() {
-		return codeItem;
+		return itemOrder;
 	}
 
 	public void setCodeItem(Item codeItem) {
-		this.codeItem = codeItem;
+		this.itemOrder = codeItem;
 	}
 	
 	

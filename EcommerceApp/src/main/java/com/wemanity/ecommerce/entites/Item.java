@@ -18,11 +18,11 @@ public class Item implements Serializable{
 	private String nameItem;
 	private double priceItem;
 	@ManyToOne
-	@JoinColumn(name="codeCategory")
-	private Category codeCategory;
+	@JoinColumn(name="categoryItem")
+	private Category categoryItem;
 	@ManyToOne
-	@JoinColumn(name="codeBrand")
-	private Brand codeBrand;
+	@JoinColumn(name="brandItem")
+	private Brand brandItem;
 	
 	public Item() {
 		super();
@@ -59,20 +59,20 @@ public class Item implements Serializable{
 		this.priceItem = priceItem;
 	}
 
-	public Category getCodeCategory() {
-		return codeCategory;
+	public Category getCategoryItem() {
+		return categoryItem;
 	}
 
-	public void setCodeCategory(Category codeCategory) {
-		this.codeCategory = codeCategory;
+	public void setCodeCategory(Category categoryItem) {
+		this.categoryItem = categoryItem;
 	}
 
-	public Brand getCodeBrand() {
-		return codeBrand;
+	public Brand getBrandItem() {
+		return brandItem;
 	}
 
-	public void setCodeBrand(Brand codeBrand) {
-		this.codeBrand = codeBrand;
+	public void setBrandItem(Brand brandItem) {
+		this.brandItem = brandItem;
 	}
 	
 	

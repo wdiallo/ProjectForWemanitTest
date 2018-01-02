@@ -16,7 +16,7 @@ import com.wemanity.ecommerce.entites.OrderCustomer;
 import com.wemanity.ecommerce.entites.OrderItem;
 
 @Transactional
-public class ECommerce implements IECommerce{
+public class ECommerceDao implements IECommerceDao{
 
 	@PersistenceContext
 	private EntityManager em;
@@ -169,7 +169,7 @@ public class ECommerce implements IECommerce{
 	}
 
 	@Override
-	public List<OrderCustomer> getOrders() {
+	public List<OrderCustomer> getOrderCustomers() {
 		Query req = em.createQuery("select co from OrderCustomer co");
 		return req.getResultList();
 	}

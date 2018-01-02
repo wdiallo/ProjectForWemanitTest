@@ -9,11 +9,11 @@ import com.wemanity.ecommerce.entites.Item;
 import com.wemanity.ecommerce.entites.OrderCustomer;
 import com.wemanity.ecommerce.entites.OrderItem;
 
-public interface IECommerce {
+public interface IECommerceDao {
 	
 	public Category addCategory(Category c);
 	public Customer addCustomer(Customer c);
-	public Item addItem(Item it, Long codeCat, Long codeMark);
+	public Item addItem(Item it, Long codeCat, Long codeBrand);
 	public Brand addBrand(Brand b);
 	public OrderCustomer addOrder(OrderCustomer o, Long codeCust);
 	public OrderItem addOrderItem(OrderItem oi, Long codeOrderCust, Long codeItem);
@@ -33,7 +33,7 @@ public interface IECommerce {
 	public List<Customer> getCustomers();
 	public List<Item> getItems();
 	public List<Brand> getBrands();
-	public List<OrderCustomer> getOrders();
+	public List<OrderCustomer> getOrderCustomers();
 	public List<OrderItem> getOrderItems();
 	
 	public List<Item> getItemByCategory(Long codeCat);
